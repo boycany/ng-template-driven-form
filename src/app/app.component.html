@@ -1,0 +1,15 @@
+<div class="container">
+  <ul style="list-style: none;" class="d-flex align-items-center justify-content-between">
+    <li>
+      <button class="btn-sm btn btn-outline text-primary" (click)="selected = 'form-by-teacher'">Form By Teacher
+        >></button>
+    </li>
+    <span class="text-primary"> | </span>
+    <li>
+      <button class="btn-sm btn btn-outline text-primary" (click)="selected = 'form-after-class'">Form After Class
+        >></button>
+    </li>
+  </ul>
+  <app-form-by-teacher *ngIf=" selected==='form-by-teacher'"></app-form-by-teacher>
+  <app-form-after-class *ngIf=" selected==='form-after-class'"></app-form-after-class>
+</div>
